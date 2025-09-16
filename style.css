@@ -36,7 +36,7 @@ header {
 /* Hero */
 .hero {
   height: 100vh;
-  background: url('/imagens/principal.jpg') center no-repeat;
+  background: url('//imagens/principal.jpg') center no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,3 +98,4 @@ footer {
   font-size: 0.9rem;
   margin-top: 40px;
 }
+
