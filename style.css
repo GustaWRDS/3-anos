@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: #FFF8DC; /* bege suave */
+  color: #3a3a3a;
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #40E0D0; /* turquesa suave */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff; /* dourado */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #f0c862; /* dourado suave */
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url('/imagens/principal.jpg') center no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(255, 255, 255, 0.546);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #2c2c2c;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+p{
+  font-size: 1.2rem;
+}
+
+h2 {
+  color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+.tempo {
+  background: rgba(255, 255, 255, 0.7); /* branco gelo translúcido */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  font-size: 1.2rem;
+  color: #1CA9C9; /* azul oceano */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Galeria */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Rodapé */
+footer {
+  background: #40E0D0;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
