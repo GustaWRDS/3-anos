@@ -13,7 +13,8 @@
       <a href="#inicio">Início</a>
       <a href="#contador">∞</a>
       <a href="#fotos">Memórias</a>
-      <a href="#musicas">Músicas</a>
+      <a href="#mensagens">Músicas</a>
+      <a href="#musicas">Cad</a>
     </nav>
   </header>
 
@@ -27,37 +28,44 @@
   </section>
 
   <!-- Contador -->
-  <section id="contador">
-    <h2>Estamos juntos há:</h2>
-    <div class="tempo" id="timeTogether"></div>
+  <section id="contador" class="contador">
+    <div class="overlay">
+      <h2>Estamos juntos há:</h2>
+      <div class="tempo" id="timeTogether"></div>
+    </div>
   </section>
 
   <!-- Fotos -->
   <section id="fotos">
-    <h2>Nossos Momentos</h2>
-    <div class="gallery">
-      <img src="foto1.jpg" alt="Foto 1">
-      <img src="foto2.jpg" alt="Foto 2">
-      <img src="foto3.jpg" alt="Foto 3">
+  <div class="overlay-fotos">
+    <h2>Nossas Memórias ⌛</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="imagens/foto1.jpg" id="Foto1" alt="Foto 1">
+        <img src="imagens/foto2.jpg" id="Foto2" alt="Foto 2">
+        <img src="imagens/foto3.jpg" id="Foto 3" alt="Foto 3">
+        <img src="imagens/foto4.jpg" id="Foto 4" alt="Foto 4">
+        <img src="imagens/foto5.jpg" id="Foto 5" alt="Foto 5">
+        <img src="imagens/foto6.jpg" id="Foto 6" alt="Foto 6">
+        <img src="imagens/foto7.jpg" id="Foto 7" alt="Foto 7">
+      </div>
+      <!-- Botões -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+      <!-- Bolinhas -->
+      <div class="dots"></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Mensagens -->
-  <!-- 
-  
-  <section id="mensagens">
-    <h2>Cartinhas 💌</h2>
-    <p>"Aqui você pode escrever mensagens especiais para ela."</p>
-  </section>
-
-  -->
 
   <!-- Músicas -->
   <section id="musicas">
     <h2>Nossa Trilha Sonora 🎶</h2>
     <iframe data-testid="embed-iframe" style="border-radius:12px" 
-      src="https://open.spotify.com/embed/playlist/7m4rNSKIlpAqbZMFJBWUce?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" 
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    src="https://open.spotify.com/embed/playlist/7m4rNSKIlpAqbZMFJBWUce?utm_source=generator" 
+    width="100%" height="352" frameBorder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </section>
 
   <!-- Rodapé -->
@@ -68,6 +76,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
