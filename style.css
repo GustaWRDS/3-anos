@@ -36,7 +36,7 @@ header {
 /* Hero */
 .hero {
   height: 80vh;
-  background: url('/imagens/principal.jpg') center no-repeat;
+  background: url('imagens/principal.jpg') center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -72,7 +72,7 @@ h2 {
 
 .contador {
   height: 80vh;
-  background: url('/imagens/secundaria') center no-repeat;
+  background: url('imagens/secundaria') center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -93,7 +93,7 @@ h2 {
 
 #fotos {
   height: 80vh;
-  background: url('/imagens/terceira') center no-repeat;
+  background: url('imagens/terceira') center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -265,3 +265,4 @@ footer {
   font-size: 0.9rem;
   margin-top: 40px;
 }
+
