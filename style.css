@@ -35,8 +35,9 @@ header {
 
 /* Hero */
 .hero {
-  height: 100vh;
-  background: url('//imagens/principal.jpg') center no-repeat;
+  height: 80vh;
+  background: url('/imagens/principal.jpg') center no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,32 +64,198 @@ p{
 }
 
 h2 {
-  color: #2c2c2c;
+  color: white;
   margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.contador {
+  height: 80vh;
+  background: url('/imagens/secundaria') center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid red; 
 }
 
 .tempo {
   background: rgba(255, 255, 255, 0.7); /* branco gelo translúcido */
   border-radius: 12px;
   padding: 20px;
-  margin: 30px auto;
   font-size: 1.2rem;
   color: #1CA9C9; /* azul oceano */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Galeria */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 20px;
+
+#fotos {
+  height: 80vh;
+  background: url('/imagens/terceira') center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.gallery img {
+#foto1, #foto2, #foto3, #foto4, #foto5, #foto6, #foto7 {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* overlay-fotos responsivo */
+.overlay-fotos {
+  background: rgba(0, 0, 0, 0.45);
+  width: min(92vw, 750px);
+  aspect-ratio: 16 / 10;
+  max-height: 80vh;
+  overflow: hidden;
+  border-radius: 12px;
+
+/* Centralização interna */
+  display: flex;
+  flex-direction: column;   /* h2 em cima, slider abaixo */
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: auto; /* garante centralização se algo falhar */
+}
+
+.overlay-fotos h2 {
+  color: white;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* slider dentro da overlay */
+.slider {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  height: 100%;
+  position: relative;
+}
+
+/* slides em linha; cada img ocupa 100% do container */
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.55s ease-in-out;
+  will-change: transform;
+}
+
+.slides img {
+  flex: 0 0 100%;
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* botões (prev/next) */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  border: none;
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* bolinhas */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 6;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  background: rgba(200,200,200,0.6);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform .15s, background .15s;
+}
+
+.dots .active {
+  background: #fff;
+  transform: scale(1.15);
+}
+
+/* responsividade: botões menor em telas pequenas */
+@media (max-width: 480px) {
+  .prev, .next {
+    padding: 6px;
+    font-size: 16px;
+  }
+  .dots { gap: 6px; }
+  .dots span { width: 9px; height: 9px; }
+}
+
+/* Botões */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Bolinhas */
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.dots .active {
+  background: white;
 }
 
 /* Rodapé */
@@ -98,4 +265,3 @@ footer {
   font-size: 0.9rem;
   margin-top: 40px;
 }
-
