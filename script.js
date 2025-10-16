@@ -1,5 +1,5 @@
 function calcTimeTogether() {
-  const startDate = new Date("2022-10-17T00:00:00");
+  const startDate = new Date("2022-10-18T00:00:00");
   const now = new Date();
 
   let diff = now - startDate;
@@ -108,5 +108,6 @@ sliderEl.addEventListener('touchend', () => {
   resetAutoSlide();
 });
 // 
+
 
 
